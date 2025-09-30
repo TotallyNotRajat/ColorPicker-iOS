@@ -65,7 +65,7 @@ class DeviceInfo {
              dict["locale"] = Locale.current.languageCode!
         }       
         #if targetEnvironment(simulator)
-        dict["isEmulator"] = true
+        dict["isEmulator"] = false
         #else
         dict["isEmulator"] = false
         #endif

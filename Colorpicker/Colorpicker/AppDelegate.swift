@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import trackier_ios_sdk
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let config = TrackierSDKConfig(
+                    appToken: "77dbb402-7ab6-4f58-ae8d-68aebaecaf72", // Pass your AppTrove SDK API key
+                    env: TrackierSDKConfig.ENVIRONMENT_PRODUCTION
+                )
+                TrackierSDK.initialize(config: config)
+        
         return true
     }
 

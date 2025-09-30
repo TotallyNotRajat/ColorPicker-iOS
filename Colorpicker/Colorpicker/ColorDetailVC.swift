@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import trackier_ios_sdk
 
 class ColorDetailVC: UIViewController {
     
@@ -87,6 +88,23 @@ class ColorDetailVC: UIViewController {
     }
     
     @IBAction func copyButtonTapped(_ sender: UIButton) {
+        
+        let event = TrackierEvent(id: TrackierEvent.LEVEL_ACHIEVED)
+
+        /* Below are the function for the adding the extra data,
+           You can add the extra data like login details of user or anything you need.
+           We have 10 params to add data, Below 5 are mentioned */
+        event.param1 = "this is a param1 value"
+        event.param2 = "this is a param2 value"
+        event.param3 = "this is a param3 value"
+        event.param4 = "this is a param4 value"
+        event.param5 = "this is a param5 value"
+        DispatchQueue.global().async {
+            sleep(1)
+            TrackierSDK.trackEvent(event: event)
+            
+        }
+        
         guard let hexCode = selectedColor?.hexCode else { return }
         
         UIPasteboard.general.string = hexCode

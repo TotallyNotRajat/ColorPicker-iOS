@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.9.1)
+  - CryptoSwift (1.4.3)
+  - trackier-ios-sdk (1.6.75):
+    - Alamofire (~> 5.9.0)
+    - CryptoSwift (~> 1.4.1)
+    - Willow (~> 5.0)
+  - Willow (5.2.1)
+
+DEPENDENCIES:
+  - trackier-ios-sdk
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CryptoSwift
+    - trackier-ios-sdk
+    - Willow
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  CryptoSwift: a0799ee936271bd2253a006f1e4523df21845000
+  trackier-ios-sdk: 758aed66f0b6f91e126cb4d50d2420905846dcd6
+  Willow: a6310f9aedcb6f4de8c35b94fd3416a660ae9280
+
+PODFILE CHECKSUM: 7229cb7fe001bdd6d91ab82487216867470539ce
+
+COCOAPODS: 1.16.2

@@ -97,8 +97,17 @@ class ColorDetailVC: UIViewController {
         event.param1 = "this is a param1 value"
         event.param2 = "this is a param2 value"
         event.param3 = "this is a param3 value"
-        event.param4 = "this is a param4 value"
+        event.param4 = "this is a param4 value";
         event.param5 = "this is a param5 value"
+        
+        TrackierSDK.setUserID(userId: "USER123")              // String: User ID
+        TrackierSDK.setUserEmail(userEmail: "user@example.com") // String: User email
+        TrackierSDK.setUserName(userName: "Jane Doe")         // String: User name
+        TrackierSDK.setUserPhone(userPhone: "+1234567890")    // String: User phone
+        TrackierSDK.setDOB(dob: "1990-01-01")                 // String: Date of birth (YYYY-MM-DD)
+        TrackierSDK.setGender(gender: .MALE)                  // Gender: MALE, FEMALE, or OTHERS
+        TrackierSDK.setDeviceToken(deviceToken: "2342344234")
+        
         DispatchQueue.global().async {
             sleep(1)
             TrackierSDK.trackEvent(event: event)
